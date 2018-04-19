@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jjiang.myapplication">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".MyApplication"
+        android:theme="@style/AppTheme" >
+
+
+        <activity android:name=".activities.DemosActivity" android:theme="@style/AppTheme.NoActionBar" android:label="@string/app_name">
+
+
+        <intent-filter>
+
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+
+        </intent-filter>
+
+        </activity>
+
+        <activity android:name=".activities.JurisdictionsDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="@string/app_name" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.MapDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Map Contextual Airspace" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.FlightPlanDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Flight Plan Demo" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.FlightBriefDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Flight Briefing Demo" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.TrafficDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Traffic Demo" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.TelemetryDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Telemetry Demo" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <activity android:name=".activities.AnonymousLoginDemoActivity" android:theme="@style/AppTheme.NoActionBar" android:label="Anonymous Login Demo" android:parentActivityName=".activities.DemosActivity"> </activity>
+
+        <service android:name="com.mapbox.services.android.telemetry.service.TelemetryService"/>
+
+    </application>
+</manifest>
