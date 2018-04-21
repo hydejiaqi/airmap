@@ -13,19 +13,19 @@ import com.airmap.airmapsdk.ui.activities.MyLocationMapActivity;
 import com.airmap.airmapsdk.ui.views.AirMapMapView;
 import com.example.jjiang.myapplication.R;
 import com.example.jjiang.myapplication.activities.MapDemoActivity;
+import com.example.jjiang.myapplication.ui.AutelAirmapView;
 
 
 import java.util.List;
 
-public class MapFragment extends Fragment implements AirMapMapView.OnMapDataChangeListener {
+public class MapFragment extends Fragment implements AirMapMapView.OnMapDataChangeListener{
 
     private static final String TAG = "MapFragment";
 
-    private AirMapMapView mapView;                  // mapbox MapView wrapper
+    private AutelAirmapView mapView;                  // mapbox MapView wrapper
     private FloatingActionButton myLocationFab;       // FAB to view/change selected rulesets
 
     private AirMapMapView.DynamicConfiguration configuration;
-
     public static MapFragment newInstance() {
         return new MapFragment();
     }
@@ -47,8 +47,12 @@ public class MapFragment extends Fragment implements AirMapMapView.OnMapDataChan
             }
         });
 
+
         return view;
     }
+
+
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -141,4 +145,6 @@ public class MapFragment extends Fragment implements AirMapMapView.OnMapDataChan
         super.onLowMemory();
         mapView.onLowMemory();
     }
+
+
 }
