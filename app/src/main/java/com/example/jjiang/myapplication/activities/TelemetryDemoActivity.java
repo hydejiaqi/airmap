@@ -38,6 +38,7 @@ public class TelemetryDemoActivity extends BaseActivity {
 
     private AirMapFlight currentFlight;
     private Marker myMarker;
+    private boolean isTragging;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class TelemetryDemoActivity extends BaseActivity {
 
     private void setupMapDragging(final MapboxMap map) {
         final float screenDensity = getResources().getDisplayMetrics().density;
+
         mapView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

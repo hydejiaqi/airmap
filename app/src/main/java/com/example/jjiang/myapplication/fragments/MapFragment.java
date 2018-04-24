@@ -22,7 +22,7 @@ public class MapFragment extends Fragment implements AirMapMapView.OnMapDataChan
 
     private static final String TAG = "MapFragment";
 
-    private AutelAirmapView mapView;                  // mapbox MapView wrapper
+    private AirMapMapView mapView;                  // mapbox MapView wrapper
     private FloatingActionButton myLocationFab;       // FAB to view/change selected rulesets
 
     private AirMapMapView.DynamicConfiguration configuration;
